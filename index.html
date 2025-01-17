@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbería Premium - Estilo y Cuidado para Caballeros</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="/placeholder.svg?height=50&width=50" alt="Logo Barbería Premium">
-                <h1>Barbería Premium</h1>
+                <img src="/img/BARBERSHOPMG.jpg" alt="Logo Barbería Premium">
+                <h1>Barbershop MG</h1>
             </div>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -25,37 +30,37 @@
 
     <main>
         <section id="inicio" class="hero">
-            <h2>Bienvenido a Barbería Premium</h2>
+            <h2>Bienvenido a Barbershop MG</h2>
             <p>Donde el estilo se encuentra con la tradición</p>
             <a href="#contacto" class="cta-button">Reserva tu cita</a>
         </section>
 
-        <section id="servicios">
+        <section id="servicios" class="servicios-section"></section>
             <h2>Nuestros Servicios</h2>
             <div class="servicios-grid">
-                <div class="servicio">
-                    <i class="fas fa-cut"></i>
-                    <h3>Corte de Cabello</h3>
-                    <p>Cortes clásicos y modernos para todo tipo de cabello.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-beard"></i>
-                    <h3>Arreglo de Barba</h3>
-                    <p>Perfilado y cuidado experto para tu barba.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-spray-can"></i>
-                    <h3>Peinados</h3>
-                    <p>Estilos para cada ocasión, desde lo casual hasta lo formal.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-hot-tub"></i>
-                    <h3>Tratamientos Capilares</h3>
-                    <p>Cuidado profundo para un cabello saludable y fuerte.</p>
-                </div>
+            <div class="servicio">
+                <i class="fas fa-cut"></i>
+                <h3>Corte de Cabello</h3>
+                <p>Cortes clásicos y modernos para todo tipo de cabello.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-clipboard"></i>
+                <h3>Arreglo de Barba</h3>
+                <p>Puedes hacer tu cita mediante formulario.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-spray-can"></i>
+                <h3>Peinados</h3>
+                <p>Estilos para cada ocasión, desde lo casual hasta lo formal.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-trophy"></i>
+                <h3>Exp</h3>
+                <p>Tratamos de dar la mejor experiencia mejorando nuestro servicio</p>
+            </div>
             </div>
         </section>
-
+<!--
         <section id="galeria">
             <h2>Nuestra Galería</h2>
             <div class="galeria-grid">
@@ -65,21 +70,38 @@
                 <img src="/placeholder.svg?height=200&width=300" alt="Tratamiento capilar en progreso">
             </div>
         </section>
+        -->
 
         <section id="contacto">
             <h2>Contáctanos</h2>
             <form id="contactForm">
                 <input type="text" name="nombre" placeholder="Nombre" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <input type="email" name="email" placeholder="Email" >
+                <input type="tel" name="telefono" placeholder="Teléfono" >
                 <select name="servicio" required>
                     <option value="">Selecciona un servicio</option>
-                    <option value="corte">Corte de Cabello</option>
-                    <option value="barba">Arreglo de Barba</option>
-                    <option value="peinado">Peinado</option>
-                    <option value="tratamiento">Tratamiento Capilar</option>
+                    <option value="Corte clásico">Corte clásico</option>
+                    <option value="Corte fade">Corte fade</option>
+                    <option value="Corte taper">Corte taper</option>
+                    <option value="Corte degradado">Corte degradado</option>
+                    <option value="Corte Mohicano">Corte Mohicano</option>
+                    <option value="Corte mullet">Corte mullet</option>
+                    <option value="Corte undercut">Corte undercut</option>
+                    <option value="Corte militar">Corte militar</option>
                 </select>
-                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <select name="hora" required>
+                    <option value="">Selecciona un horario</option>
+                    <option value="8:00">8:00</option>
+                    <option value="9:00">9:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                </select>
+                <textarea name="mensaje" placeholder="Mensaje" ></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </section>
@@ -89,24 +111,27 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Ubicación</h3>
-                <p>Calle Principal 123, Ciudad</p>
+               <a href="https://www.google.com.mx/maps/place/Barbershop+MG/@20.9993868,-99.7223349,18.17z/data=!4m6!3m5!1s0x85d4710031f6033f:0xc2c0dd3c232aab2!8m2!3d20.9987718!4d-99.7218103!16s%2Fg%2F11yblw3w1_?entry=ttu&g_ep=EgoyMDI1MDExNC4wIKXMDSoASAFQAw%3D%3D">
+                 <p>Click aqui</p></a>
             </div>
             <div class="footer-section">
                 <h3>Horario</h3>
-                <p>Lun - Sáb: 9:00 AM - 8:00 PM</p>
-                <p>Domingo: Cerrado</p>
+                <p>Lun - Dom: 8:00  - 12:00</p>
+                <p>Lun - Dom: Se cierra una hora de 12:00 a 13:00</p>
+                <p>Lun - Dom: 13:00 - 18:00</p>
+                
             </div>
             <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>Teléfono: (123) 456-7890</p>
-                <p>Email: info@barberiapremium.com</p>
+                <h3>Contactos</h3>
+                <p><a href="https://wa.me/524411000885" target="_blank"><i class="fab fa-whatsapp"></i></a></p>
+                <p><a href="https://wa.me/524412822828" target="_blank"><i class="fab fa-whatsapp"></i></a></p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Barbería Premium. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Barbershop. Todos los derechos reservados.</p>
         </div>
     </footer>
-
+<!--
     <div id="openChatbot" class="chatbot-toggle">
         <i class="fas fa-comments"></i>
     </div>
@@ -122,6 +147,7 @@
             <button id="sendMessage">Enviar</button>
         </div>
     </div>
+     -->
 
     <script src="script.js"></script>
 </body>

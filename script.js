@@ -5,8 +5,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const data = Object.fromEntries(formData);
     
     // Enviar por WhatsApp
-    const whatsappMessage = `Nuevo contacto: ${data.nombre}, Email: ${data.email}, Teléfono: ${data.telefono}, Servicio: ${data.servicio}, Mensaje: ${data.mensaje}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=TUNUMERODEWHATSAPP&text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappMessage = `Nuevo contacto: ${data.nombre}, Email: ${data.email}, Teléfono: ${data.telefono}, Servicio: ${data.servicio}, Horario: ${data.hora}, Mensaje: ${data.mensaje}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=524411000885&text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     
     // Enviar por correo electrónico (simulado)

@@ -35,20 +35,31 @@ nav {
     padding: 0 20px;
 }
 
+@font-face {
+    font-family: 'FuenteParaTitulo';
+    src: url('fonts/Booney Nights.ttf') format('truetype'); /* Sin espacios extra */
+    font-weight: normal;
+    font-style: normal;
+}
+
 .logo {
     display: flex;
     align-items: center;
+    color: aqua;
+    font-family: "FuenteParaTitulo";
 }
 
 .logo img {
-    width: 50px;
-    height: auto;
+    width: 80px;  /* Ajusta el tamaño de la imagen */
+    height: auto;  /* Mantiene la relación de aspecto de la imagen */
     margin-right: 10px;
+    max-width: 100%;  /* Asegura que la imagen no se desborde del contenedor */
 }
 
 .logo h1 {
-    font-size: 1.5rem;
+    font-size: 5rem;  /* Tamaño grande del texto */
 }
+
 
 nav ul {
     display: flex;
@@ -87,9 +98,10 @@ h2 {
 
 /* Hero section */
 .hero {
-    background-image: url('/placeholder.svg?height=600&width=1200');
-    background-size: cover;
+    background-image: url('img/BARBERSHOPMG.jpg');
+    background-size: contain;  /* Cambié de 'cover' a 'contain' para mostrar la imagen completa */
     background-position: center;
+    background-repeat: no-repeat;  /* Esto evita que la imagen se repita si no cubre todo el área */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -221,6 +233,15 @@ footer {
     color: #ecf0f1;
     padding: 3rem 0 1rem;
 }
+footer a {
+    color: aqua;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fd7600;
+}
 
 .footer-content {
     display: flex;
@@ -231,6 +252,7 @@ footer {
 
 .footer-section {
     margin-bottom: 1rem;
+    color:aqua ;
 }
 
 .footer-section h3 {
