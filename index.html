@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Premium - Estilo y Cuidado para Caballeros</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/placeholder.svg?height=50&width=50" alt="Logo Barbería Premium">
+                <h1>Barbería Premium</h1>
+            </div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h2>Bienvenido a Barbería Premium</h2>
+            <p>Donde el estilo se encuentra con la tradición</p>
+            <a href="#contacto" class="cta-button">Reserva tu cita</a>
+        </section>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <i class="fas fa-cut"></i>
+                    <h3>Corte de Cabello</h3>
+                    <p>Cortes clásicos y modernos para todo tipo de cabello.</p>
+                </div>
+                <div class="servicio">
+                    <i class="fas fa-beard"></i>
+                    <h3>Arreglo de Barba</h3>
+                    <p>Perfilado y cuidado experto para tu barba.</p>
+                </div>
+                <div class="servicio">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Peinados</h3>
+                    <p>Estilos para cada ocasión, desde lo casual hasta lo formal.</p>
+                </div>
+                <div class="servicio">
+                    <i class="fas fa-hot-tub"></i>
+                    <h3>Tratamientos Capilares</h3>
+                    <p>Cuidado profundo para un cabello saludable y fuerte.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Nuestra Galería</h2>
+            <div class="galeria-grid">
+                <img src="/placeholder.svg?height=200&width=300" alt="Corte de cabello estilo clásico">
+                <img src="/placeholder.svg?height=200&width=300" alt="Arreglo de barba profesional">
+                <img src="/placeholder.svg?height=200&width=300" alt="Peinado moderno">
+                <img src="/placeholder.svg?height=200&width=300" alt="Tratamiento capilar en progreso">
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form id="contactForm">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <select name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="corte">Corte de Cabello</option>
+                    <option value="barba">Arreglo de Barba</option>
+                    <option value="peinado">Peinado</option>
+                    <option value="tratamiento">Tratamiento Capilar</option>
+                </select>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p>Calle Principal 123, Ciudad</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lun - Sáb: 9:00 AM - 8:00 PM</p>
+                <p>Domingo: Cerrado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Email: info@barberiapremium.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Barbería Premium. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="openChatbot" class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div id="chatbot" class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Asistente Virtual</h3>
+            <button id="closeChatbot">&times;</button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Escribe tu mensaje...">
+            <button id="sendMessage">Enviar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
