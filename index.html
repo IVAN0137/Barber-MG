@@ -44,7 +44,7 @@
 
         <section id="servicios" class="servicios">
             <div class="container">
-                <h2 class="section-title" style="color: black;">Nuestros Servicios</h2>
+                <h2 class="contactanos-title">Nuestros Servicios</h2>
                 <div class="servicios-grid">
                     <div class="servicio-card">
                         <i class="fas fa-cut servicio-icon"></i>
@@ -72,7 +72,7 @@
 
         <section id="galeria" class="galeria">
             <div class="container">
-                <h2 class="section-title">Principales tipos de cortes</h2>
+                <h2 class="contactanos-title">Principales tipos de cortes</h2>
                 <div class="galeria-grid">
                     <div>
                     <p> <h1 class="nombres-galeria">Corte Undercut</h1>
@@ -132,7 +132,7 @@
  -->
         <section id="contacto" class="contacto">
             <div class="container">
-                <h2 class="section-title">Contáctanos</h2>
+                <h2 class="contactanos-title">Contáctanos</h2>
                 <div class="contacto-wrapper">
                     <form id="contactForm" class="contacto-form">
                         <div class="form-group">
@@ -152,8 +152,13 @@
                                 <option value="Taper Fade">Taper Fade</option>
                                 <option value="Mohicano">Mohicano</option>
                                 <option value="Fade Comprimido">Fade Comprimido</option>
-                                
+                                <option value="Otro">Otro</option> <!-- Opción 'Otro' -->
                             </select>
+                        </div>
+                        
+                        <div class="form-group" id="foto-section" style="display: none;">
+                            <label for="foto">Subir foto</label>
+                            <input type="file" id="foto" name="foto">
                         </div>
                         <div class="form-group">
                             <label for="servicio">Horario</label>
@@ -163,6 +168,7 @@
                                 <option value="9:00">9:00</option>
                                 <option value="10:00">10:00</option>
                                 <option value="11:00">11:00</option>
+                                <option value="" disabled>12:00 (Cerrado)</option>
                                 <option value="13:00">13:00</option>
                                 <option value="14:00">14:00</option>
                                 <option value="15:00">15:00</option>

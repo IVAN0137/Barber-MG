@@ -70,6 +70,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const formFields = contactForm.querySelectorAll('input, select, textarea');
   const formSubmitButtons = contactForm.querySelectorAll('.submit-btn');
 
+  // Función para manejar la opción 'Otro' y mostrar la notificación
+  const servicioSelect = document.querySelector('select[name="servicio"]'); // Asegúrate de que el nombre del select es correcto
+
+  servicioSelect.addEventListener('change', () => {
+      const servicioValue = servicioSelect.value;
+      const notificacionDiv = document.querySelector('.notification');
+
+      // Si el usuario selecciona "Otro", mostramos la notificación
+      if (servicioValue === 'Otro') {
+          if (!notificacionDiv) {
+              const message = document.createElement('div');
+              message.className = 'notification';
+                message.textContent = 'Por favor, envía una foto de como seria el corte después de enviar el formulario. Gracias.';
+              servicioSelect.parentElement.appendChild(message);
+          }
+      } else {
+          // Si no selecciona "Otro", eliminamos la notificación si existe
+          if (notificacionDiv) {
+              notificacionDiv.remove();
+          }
+      }
+  });
+
   // Función para validar el formulario
   const validateForm = () => {
       let isValid = true;
@@ -105,49 +128,47 @@ document.addEventListener('DOMContentLoaded', () => {
       return encodeURIComponent(
           `Hola, quisiera agendar una cita ${barbero}.\n\n` +
           `Mi nombre es: ${nombre}\n` +
-          `Servicio: ${servicio}\n` +
+          `Tipo de corte: ${servicio}\n` +
           `Horario: ${horario}\n` +
-           'Si tienes disponibilidad, por favor házmelo saber. Gracias!'
+          'Si tienes disponibilidad, por favor házmelo saber. Gracias!'
       );
   };
 
- // Función para abrir el chat de WhatsApp
-const openWhatsAppChat = (message, barbero) => {
-  let whatsappNumber;
+  // Función para abrir el chat de WhatsApp
+  const openWhatsAppChat = (message, barbero) => {
+      let whatsappNumber;
   
-  // Define el número de WhatsApp según el barbero
-  if (barbero === 'Alexis') {
-      whatsappNumber = '524411000885'; // Reemplaza con el número de Alexis
-  } else if (barbero === 'Ivan') {
-      whatsappNumber = '524412822828'; // Reemplaza con el número de Iván
-  }
-  
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-  window.open(whatsappUrl, '_blank');
-};
-
-// Manejar el envío del formulario
-formSubmitButtons.forEach(button => {
-  button.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      if (validateForm()) {
-          const formData = new FormData(contactForm);
-          const barbero = e.target.dataset.barbero;  // Obtiene el barbero según el botón presionado
-          const whatsappMessage = formatWhatsAppMessage(formData, barbero);
-
-          // Abrir chat de WhatsApp
-          openWhatsAppChat(whatsappMessage, barbero);
-
-          // Mostrar mensaje de éxito
-          showMessage(`Tu solicitud de cita con ${barbero} ha sido enviada por WhatsApp. Por favor, revisa tu aplicación de WhatsApp para continuar la conversación.`, 'success');
-          contactForm.reset();
-      } else {
-          showMessage('Por favor, completa todos los campos requeridos.', 'error');
+      if (barbero === 'Alexis') {
+          whatsappNumber = '524411000885'; 
+      } else if (barbero === 'Ivan') {
+          whatsappNumber = '524412822828';
       }
-  });
-});
+  
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+  };
 
+  // Manejar el envío del formulario
+  formSubmitButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          if (validateForm()) {
+              const formData = new FormData(contactForm);
+              const barbero = e.target.dataset.barbero;
+              const whatsappMessage = formatWhatsAppMessage(formData, barbero);
+
+              // Abrir chat de WhatsApp
+              openWhatsAppChat(whatsappMessage, barbero);
+
+              // Mostrar mensaje de éxito
+              showMessage(`Tu solicitud de cita con ${barbero} ha sido enviada por WhatsApp. Por favor, revisa tu aplicación de WhatsApp para continuar la conversación.`, 'success');
+              contactForm.reset();
+          } else {
+              showMessage('Por favor, completa todos los campos requeridos.', 'error');
+          }
+      });
+  });
 
   // Validación en tiempo real
   formFields.forEach(field => {
@@ -275,4 +296,3 @@ formSubmitButtons.forEach(button => {
   // Asegúrate de que la función initMap esté disponible globalmente
   window.initMap = initMap;
 });
-

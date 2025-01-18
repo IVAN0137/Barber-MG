@@ -75,6 +75,8 @@ body {
     font-size: 3rem;
     color: aqua;
     font-weight: 700;
+    animation: fadeInDown 5s ease-out;
+
 }
 
 .nav-list {
@@ -133,7 +135,7 @@ body {
     font-size: 10rem;
     color: aqua;
     margin-bottom: 1rem;
-    animation: fadeInDown 1s ease-out;
+    animation: fadeInDown 2.5s ease-out;
 }
 
 .hero-subtitle {
@@ -592,6 +594,24 @@ textarea:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
+.notification {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+.contactanos-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: orangered;
+    font-family: 'titulo', serif;
+}
+
+
 
 /* Modo oscuro */
 @media (prefers-color-scheme: dark) {
