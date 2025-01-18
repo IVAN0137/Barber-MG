@@ -609,6 +609,7 @@ textarea:focus {
     margin-bottom: 2rem;
     color: orangered;
     font-family: 'titulo', serif;
+    animation: fadeInDown 5s ease-out;
 }
 
 
