@@ -98,18 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Función para formatear el mensaje de WhatsApp
   const formatWhatsAppMessage = (formData, barbero) => {
       const nombre = formData.get('nombre');
-      const email = formData.get('email');
-      const telefono = formData.get('telefono');
       const servicio = formData.get('servicio');
+      const horario = formData.get('horario');
       const mensaje = formData.get('mensaje');
 
       return encodeURIComponent(
-          `Hola, quisiera agendar una cita.\n\n` +
-          `Nombre: ${nombre}\n` +
-          `Email: ${email}\n` +
-          `Teléfono: ${telefono}\n` +
+          `Hola, quisiera agendar una cita ${barbero}.\n\n` +
+          `Mi nombre es: ${nombre}\n` +
           `Servicio: ${servicio}\n` +
-          `Mensaje: ${mensaje}`
+          `Horario: ${horario}\n` +
+           'Si tienes disponibilidad, por favor házmelo saber. Gracias!'
       );
   };
 

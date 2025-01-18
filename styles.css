@@ -409,6 +409,14 @@ body {
     margin-top: 1rem;
 }
 
+.nombres-galeria {
+    font-family: 'titulo', serif;
+    font-size: 3rem;
+    color: aqua;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-out;
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark-gray);

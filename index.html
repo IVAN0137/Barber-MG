@@ -22,8 +22,8 @@
                 <ul class="nav-list">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <!--        <li><a href="#galeria" class="nav-link">Galería</a></li>
-                    <li><a href="#equipo" class="nav-link">Equipo</a></li>-->
+                     <li><a href="#galeria" class="nav-link">Galería</a></li>
+                   <!--    <li><a href="#equipo" class="nav-link">Equipo</a></li>-->
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
                 <button class="nav-toggle" aria-label="Abrir menú">
@@ -62,28 +62,56 @@
                         <p class="servicio-description">Estilos para cada ocasión, desde lo casual hasta lo formal.</p>
                     </div>
                     <div class="servicio-card">
-                        <i class="fas fa-pump-soap servicio-icon"></i>
+                        <i class="fas fa-pu mp-soap servicio-icon"></i>
                         <h3 class="servicio-title">Tratamientos Capilares</h3>
                         <p class="servicio-description">Cuidado profundo para un cabello saludable y fuerte.</p>
                     </div>
                 </div>
             </div>
         </section>
-<!--
+
         <section id="galeria" class="galeria">
             <div class="container">
-                <h2 class="section-title">Nuestra Galería</h2>
+                <h2 class="section-title">Principales tipos de cortes</h2>
                 <div class="galeria-grid">
-                    <img src="img/corte clasico.jpg" alt="Corte de cabello estilo clásico" class="galeria-img">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Arreglo de barba profesional" class="galeria-img">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Peinado moderno" class="galeria-img">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Tratamiento capilar en progreso" class="galeria-img">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Corte de cabello fade" class="galeria-img">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Afeitado clásico con navaja" class="galeria-img">
+                    <div>
+                    <p> <h1 class="nombres-galeria">Corte Undercut</h1>
+                    <img src="img/Undercut.jpeg" alt="Undercut" class="galeria-img">
+                </p>
+            </div>    
+            <div>
+                 <p>
+                    <h1 class="nombres-galeria">Mid Fade</h1>
+                    <img src="img/Mid Fade.jpeg" alt="Mid Fade" class="galeria-img">
+                </p>
+                    </div>
+                    <div>
+                <p>
+                    <h1 class="nombres-galeria">Taper Fade</h1>
+                    <img src="img/Taper Fde.jpeg" alt="Taper Fade" class="galeria-img">
+                </p>
+            </div>
+            <div>
+                <p>
+                    <h1 class="nombres-galeria">Mohicano</h1>
+                    <img src="img/Mohicano.jpeg" alt="Mohicano" class="galeria-img">
+                </p>
+            </div>
+            <div>
+                <p>
+                    <h1 class="nombres-galeria">Fade Comprimido</h1>
+                    <img src="img/Fade Comprimido.jpg" alt="Fade Comprimido" class="galeria-img">
+                </p>
+            </div>
+            <div><p>
+                    <h1 class="nombres-galeria">Corte Clasico</h1>
+                    <img src="img/Corte Clasico.jpg" alt="Corte  clasico" class="galeria-img">
+                </p>
+            </div>
                 </div>
             </div>
         </section>
-   
+   <!--
         <section id="equipo" class="equipo">
             <div class="container">
                 <h2 class="section-title">Nuestro Equipo</h2>
@@ -111,38 +139,36 @@
                             <label for="nombre">Nombre</label>
                             <input type="text" id="nombre" name="nombre" required>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="No es obligatorio ">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="No es obligatorio" >
-                        </div>
+                        
                         <div class="form-group">
                             <label for="servicio">Servicio</label>
                             <select id="servicio" name="servicio" required>
                                 <option value="">Selecciona un servicio</option>
-                                <option value="corte">Corte de Cabello</option>
-                                <option value="barba">Arreglo de Barba</option>
-                                <option value="peinado">Peinado</option>
-                                <option value="tratamiento">Tratamiento Capilar</option>
+                                <option value="Corte clasico">Corte clasico</option>
+                                <option value="Low Fade">Low Fade</option>
+                                <option value="Medium Fade">Medium Fade</option>
+                                <option value="High Fade">High Fade</option>
+                                <option value="Corte Undercut">Corte Undercut</option>
+                                <option value="Taper Fade">Taper Fade</option>
+                                <option value="Mohicano">Mohicano</option>
+                                <option value="Fade Comprimido">Fade Comprimido</option>
+                                
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="servicio">Servicio</label>
-                            <select id="servicio" name="servicio" required>
+                            <label for="servicio">Horario</label>
+                            <select id="servicio" name="horario" required>
                                 <option value="">Selecciona un horario</option>
                                 <option value="8:00">8:00</option>
-                                <option value="barba"></option>
-                                <option value="peinado"></option>
-                                <option value="tratamiento"></option>
+                                <option value="9:00">9:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
                             </select>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" required></textarea>
                         </div>
                         <div class="form-buttons">
                             <button type="submit" class="submit-btn" data-barbero="Alexis">Reservar con Alexis</button>
