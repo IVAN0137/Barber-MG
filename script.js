@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (barbero === 'Alexis') {
           whatsappNumber = '524411000885'; 
       } else if (barbero === 'Ivan') {
-          whatsappNumber = '524412822828';
+          whatsappNumber = '527207444187';
       }
   
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
